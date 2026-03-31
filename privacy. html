@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanBowl - Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            color: #1c1c1e;
+            background: #fff;
+        }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+        h2 { font-size: 18px; font-weight: 600; margin-top: 36px; margin-bottom: 8px; }
+        p, li { font-size: 15px; color: #3c3c43; }
+        ul { padding-left: 20px; }
+        .meta { font-size: 13px; color: #8e8e93; margin-bottom: 40px; }
+        a { color: #000; }
+    </style>
+</head>
+<body>
+
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last Updated: March 31, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p>CleanBowl ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use the CleanBowl app.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We may collect the following types of information:</p>
+    <ul>
+        <li><strong>Account information:</strong> Name and email address when you sign in with Apple or Google</li>
+        <li><strong>Pet profile data:</strong> Species, name, age, and dietary sensitivities you provide during onboarding</li>
+        <li><strong>Scan history:</strong> Products you have scanned and saved within the app</li>
+        <li><strong>Usage data:</strong> How you interact with the app, such as features used and screens visited</li>
+        <li><strong>Device information:</strong> Device type, operating system version, and app version</li>
+    </ul>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+        <li>Provide and personalize the CleanBowl experience for you and your pet</li>
+        <li>Analyze pet food ingredients and generate safety insights</li>
+        <li>Save your scan history and favorite products</li>
+        <li>Improve the accuracy and performance of the app</li>
+        <li>Respond to support requests</li>
+        <li>Process subscription payments through Apple's App Store</li>
+    </ul>
+
+    <h2>4. Data Storage</h2>
+    <p>Your data is stored securely using Google Firebase (Firestore). We take reasonable technical and organizational measures to protect your information from unauthorized access, loss, or disclosure.</p>
+
+    <h2>5. Third-Party Services</h2>
+    <p>CleanBowl uses the following third-party services that may collect or process data:</p>
+    <ul>
+        <li><strong>Firebase (Google):</strong> Authentication and database storage</li>
+        <li><strong>RevenueCat:</strong> Subscription management</li>
+        <li><strong>Superwall:</strong> Paywall presentation</li>
+        <li><strong>Sign in with Apple / Google:</strong> Authentication</li>
+    </ul>
+    <p>Each of these services has their own privacy policies governing their use of your data.</p>
+
+    <h2>6. Data Sharing</h2>
+    <p>We do not sell, trade, or rent your personal information to third parties. We may share data only with service providers necessary to operate the app, and only to the extent required to provide those services.</p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>CleanBowl is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>You may request to access, correct, or delete your personal data at any time. You can delete your account directly within the app via Settings → Delete Account. For additional requests, contact us at <a href="mailto:jacknemdigital@gmail.com">jacknemdigital@gmail.com</a>.</p>
+
+    <h2>9. Data Retention</h2>
+    <p>We retain your data for as long as your account is active or as needed to provide services. When you delete your account, your personal data is removed from our systems within a reasonable timeframe.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the date at the top of this page. Continued use of the app after changes constitutes your acceptance of the updated policy.</p>
+
+    <h2>11. Contact Us</h2>
+    <p>If you have questions or concerns about this Privacy Policy, please contact us at <a href="mailto:jacknemdigital@gmail.com">jacknemdigital@gmail.com</a>.</p>
+
+</body>
+</html>
