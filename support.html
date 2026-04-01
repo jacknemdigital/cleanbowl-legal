@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CleanBowl — Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f9f5ee;
+      --warm-white: #fffdf8;
+      --ink: #1a1a14;
+      --ink-soft: #4a4840;
+      --ink-muted: #8a857a;
+      --green: #2d6a4f;
+      --green-light: #52b788;
+      --green-pale: #d8f3dc;
+      --border: #e5dfd3;
+      --shadow: 0 2px 20px rgba(26, 26, 20, 0.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--warm-white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.25rem 0;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      background: var(--green);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-mark svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .logo-text span {
+      color: var(--green);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--warm-white);
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--green);
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      max-width: 480px;
+      margin: 0 auto 1.75rem;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.7rem 1.6rem;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .hero-btn:hover {
+      background: #235c42;
+      transform: translateY(-1px);
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green);
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── FAQ ── */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    details {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    details[open] {
+      border-color: var(--green-light);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 1.1rem 1.3rem;
+      font-weight: 500;
+      font-size: 0.97rem;
+      color: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .faq-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--green-pale);
+      color: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 400;
+      flex-shrink: 0;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    details[open] .faq-icon {
+      background: var(--green);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .faq-body {
+      padding: 0 1.3rem 1.2rem;
+      font-size: 0.93rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      border-top: 1px solid var(--border);
+      padding-top: 0.9rem;
+    }
+
+    .faq-body a {
+      color: var(--green);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--green-pale);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--green);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-text h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-text p {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      margin-bottom: 0.9rem;
+    }
+
+    .contact-text a {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.55rem 1.25rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .contact-text a:hover {
+      background: #235c42;
+    }
+
+    /* ── TIPS GRID ── */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .tip-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.25rem 1rem;
+    }
+
+    .tip-emoji {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .tip-card h4 {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      color: var(--ink);
+    }
+
+    .tip-card p {
+      font-size: 0.84rem;
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--warm-white);
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 2rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+    }
+
+    footer a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 520px) {
+      .contact-card { flex-direction: column; gap: 1rem; }
+      .hero { padding: 2.5rem 1.25rem 2rem; }
+      main { padding: 2rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.7 3 6.1V18h8v-2.9c1.8-1.4 3-3.6 3-6.1 0-4-3-7-7-7z"/><path d="M9 21h6"/></svg>
+      </div>
+      <div class="logo-text">Clean<span>Bowl</span></div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>We're here to <em>help.</em></h1>
+    <p>Questions about CleanBowl? Find answers below or reach out directly — we usually respond within 24 hours.</p>
+    <a href="mailto:jacknemdigital@gmail.com" class="hero-btn">Email Support</a>
+  </div>
+
+  <main>
+
+    <!-- FAQ -->
+    <section>
+      <p class="section-label">FAQ</p>
+      <h2>Common questions</h2>
+      <div class="faq-list">
+
+        <details>
+          <summary>
+            How do I scan a pet food product?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            Tap the scan icon in the center of the tab bar. Point your camera at the barcode on any pet food package and CleanBowl will look it up instantly. If the barcode isn't recognized, you can also search by product name using the search tab.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            What does the safety rating mean?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            CleanBowl analyzes ingredients against a curated database of known harmful additives, fillers, and low-quality components. The rating reflects ingredient quality — it is not a veterinary or medical recommendation. Always consult your vet for specific dietary guidance.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            How do I manage or cancel my subscription?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            CleanBowl subscriptions are managed entirely through Apple. To cancel, open <strong>Settings → Apple ID → Subscriptions</strong> on your iPhone, find CleanBowl, and tap <strong>Cancel Subscription</strong>. You'll retain access until the end of your current billing period.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            I subscribed but don't have access — what do I do?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            Pull down to refresh on the home screen, or sign out and back in. If the issue persists, go to the subscription screen inside the app and tap <strong>Restore Purchases</strong>. Still stuck? <a href="mailto:jacknemdigital@gmail.com">Email us</a> and we'll sort it out right away.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            Can I get a refund?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            Refunds are handled by Apple. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, sign in with your Apple ID, find the CleanBowl charge, and request a refund. Apple typically processes these within a few business days.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            How do I delete my account and data?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            Open CleanBowl, go to <strong>Settings → Delete Account</strong>. This will permanently remove your account and all associated data from our servers. This action cannot be undone. Remember to cancel your subscription separately through Apple before deleting your account.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            What data does CleanBowl collect?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            CleanBowl collects only what's necessary to provide the service — your account credentials and scan history. We never sell your data. For full details, see our <a href="privacy.html">Privacy Policy</a>.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            A product isn't in the database — can I request it?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            Absolutely. Email us at <a href="mailto:jacknemdigital@gmail.com">jacknemdigital@gmail.com</a> with the product name and barcode number and we'll add it to our next update.
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Tips -->
+    <section>
+      <p class="section-label">Tips</p>
+      <h2>Getting the best results</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <span class="tip-emoji">💡</span>
+          <h4>Good lighting helps</h4>
+          <p>Scan barcodes in a well-lit area for faster, more accurate reads.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-emoji">🐾</span>
+          <h4>Save your favorites</h4>
+          <p>Heart any product to save it for quick access next time you shop.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-emoji">🔍</span>
+          <h4>Search by name</h4>
+          <p>Can't scan? Type the brand or product name in the search tab.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-emoji">🔄</span>
+          <h4>Restore purchases</h4>
+          <p>Switching devices? Use Restore Purchases on the subscription screen.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Contact -->
+    <section>
+      <p class="section-label">Contact</p>
+      <h2>Still need help?</h2>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="contact-text">
+          <h3>Email us directly</h3>
+          <p>We're a small team and read every message. Expect a reply within 24 hours on business days.</p>
+          <a href="mailto:jacknemdigital@gmail.com">jacknemdigital@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CleanBowl &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Use</a> &nbsp;·&nbsp; <a href="mailto:jacknemdigital@gmail.com">Contact</a></p>
+  </footer>
+
+</body>
+</html>
